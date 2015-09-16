@@ -13,6 +13,10 @@
 #define _FILE_OFFSET_BITS  64
 #define _LARGEFILE_SOURCE
 
+//modify
+#ifndef IOV_MAX
+#define IOV_MAX   1024
+#endif
 
 #include <sys/types.h>
 #include <sys/time.h>

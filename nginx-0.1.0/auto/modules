@@ -15,11 +15,11 @@ fi
 if [ $EVENT_POLL = NO -a $EVENT_FOUND = NO ]; then
     EVENT_POLL=YES
 fi
-
-if [ $EVENT_POLL = YES ]; then
+#modify
+#if [ $EVENT_POLL = YES ]; then
     CORE_SRCS="$CORE_SRCS $POLL_SRCS"
     EVENT_MODULES="$EVENT_MODULES $POLL_MODULE"
-fi
+#fi
 
 
 if [ $TEST_BUILD_DEVPOLL = YES ]; then
