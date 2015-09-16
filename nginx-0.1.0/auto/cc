@@ -63,7 +63,7 @@ case $CC in
          CFLAGS="$CFLAGS -Wno-unused"
 
          # stop on warning
-         CFLAGS="$CFLAGS -Werror"
+         #CFLAGS="$CFLAGS -Werror" #modify
 
          # ANSI C warnings
          #CFLAGS="$CFLAGS -pedantic"
@@ -88,7 +88,8 @@ case $CC in
          BINOUT="-o "
          OBJEXT="o"
 
-         CC_STRONG="$CC -Wall -Werror"
+         #CC_STRONG="$CC -Wall -Werror" #modify
+         CC_STRONG="$CC -Wall"
     ;;
 
 
@@ -146,7 +147,7 @@ case $CC in
          #CFLAGS="$CFLAGS -w2"
 
          # stop on warning
-         CFLAGS="$CFLAGS -Werror"
+         #CFLAGS="$CFLAGS -Werror" #modify
 
          # debug
          CFLAGS="$CFLAGS -g"
@@ -161,7 +162,8 @@ case $CC in
          BINOUT="-o "
          OBJEXT="o"
 
-         CC_STRONG="$CC -w1 -Werror"
+         #CC_STRONG="$CC -w1 -Werror" #modify
+         CC_STRONG="$CC -w1"
     ;;
 
 

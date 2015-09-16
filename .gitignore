@@ -1,0 +1,8 @@
+*.ini
+*.o
+*.so
+*.bak
+logs/
+cscope.*
+tags
+Makefile
