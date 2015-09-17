@@ -30,6 +30,7 @@ ngx_os_io_t ngx_os_io = {
 
 ngx_int_t ngx_os_init(ngx_log_t *log)
 {
+#if 0
     int  name[2], len;
 
     name[0] = CTL_KERN;
@@ -63,7 +64,7 @@ ngx_int_t ngx_os_init(ngx_log_t *log)
 
     }
 
-
+#endif
     return ngx_posix_init(log);
 }
 

@@ -36,7 +36,7 @@ case $CC in
          CFLAGS="$CFLAGS $PIPE $CPU_OPT"
 
          if [ ".$PCRE_OPT" = "." ]; then
-             PCRE_OPT="-O2 -fomit-frame-pointer $PIPE $CPU_OPT"
+             PCRE_OPT="-O2 -fomit-frame-pointer $PIPE $CPU_OPT" 
          else
              PCRE_OPT="$PCRE_OPT $PIPE"
          fi
@@ -54,7 +54,7 @@ case $CC in
          fi
 
          # warnings
-         CFLAGS="$CFLAGS -O -W"
+         CFLAGS="$CFLAGS -W" #modify rm -O
          CFLAGS="$CFLAGS -Wall -Wpointer-arith"
          #CFLAGS="$CFLAGS -Wconversion"
          #CFLAGS="$CFLAGS -Winline"
@@ -97,7 +97,7 @@ case $CC in
          # Intel C++ compiler 7.1, 8.0
 
          # optimizations
-         CFLAGS="$CFLAGS -O"
+         #CFLAGS="$CFLAGS -O" #modify
          # inline functions declared with __inline
          #CFLAGS="$CFLAGS -Ob1"
          # inline any function, at the compiler's discretion

@@ -118,7 +118,9 @@ int main(int argc, char *const *argv)
 
     ngx_pid = ngx_getpid();
 
-    if (!(log = ngx_log_init_stderr())) {
+    //modify
+    log = ngx_log_init_stderr();
+    if (!log ) {
         return 1;
     }
 
