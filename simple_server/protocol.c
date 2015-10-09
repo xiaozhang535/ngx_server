@@ -8,7 +8,7 @@
  * 
  ***********************************************************************
  */
-#include "protocal.h"
+#include "protocol.h"
 #include <string.h>
 #include <arpa/inet.h>
 
