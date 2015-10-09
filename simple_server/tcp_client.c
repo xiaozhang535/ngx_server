@@ -20,7 +20,7 @@
 #include <time.h>
 #include <errno.h>
 #include <stdlib.h>
-
+#include <signal.h>
 #include "protocol.h"
 
 int main ( int argc, char *argv[] )
@@ -44,7 +44,8 @@ int main ( int argc, char *argv[] )
     int iRcvBufLen = 8 * 1024;
     int i;
 
-    //signal(SIGPIPE, SIG_IGN);
+    //当对方关闭tcp socket,此时再发送数据时将会产生此信号,不处理的话程序将会异常退出
+    signal(SIGPIPE, SIG_IGN);
 
     if((iSocket=socket(AF_INET,SOCK_STREAM,IPPROTO_TCP))<0)
     {
